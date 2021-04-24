@@ -1,2 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.card-right-position{
+  position:absolute;
+  top:5px;
+  right: 5px;
+  padding:10px;
+  border-radius: 50%;
+  font-size: 14px;
+  color:white;
+  background-color:rgb(96, 96, 252);  
+}

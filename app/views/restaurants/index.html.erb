@@ -1,2 +1,19 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+
+<h2>Yelp Collections</h2>
+<div class="container">
+  <div class ="row">
+		<% @restaurants.each do |restaurant| %>
+			<div class="col">
+				<div class ="card my-3 " style="width: 18rem;">
+					<%= link_to '<i class="card-right-position far fa-comment"></i>'.html_safe, new_restaurant_review_path(restaurant) %>
+					<div class="card-header"><%= link_to restaurant.name, restaurant_path(restaurant) %></div>
+					<div class="card-body">
+						<p class="card-text "><%= restaurant.address %><br>
+						<%= restaurant.category  %><br>
+						<%= restaurant.phone_number %></p>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
